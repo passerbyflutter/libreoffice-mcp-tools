@@ -1,6 +1,6 @@
 # LibreOffice MCP Tools
 
-[![npm version](https://img.shields.io/npm/v/libreoffice-mcp-tools.svg)](https://npmjs.org/package/libreoffice-mcp-tools)
+[![npm version](https://img.shields.io/npm/v/@passerbyflutter/libreoffice-mcp-tools.svg)](https://npmjs.org/package/@passerbyflutter/libreoffice-mcp-tools)
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives AI agents (Claude, Copilot, Gemini, Cursor, etc.) the ability to **read, write, and edit Office documents** via LibreOffice — with a token-efficient design that minimizes LLM context usage.
 
@@ -45,9 +45,29 @@ Inspired by the architecture of [chrome-devtools-mcp](https://github.com/ChromeD
 
 ### Installation
 
+**Using npx (recommended — no install needed):**
+
+```json
+{
+  "mcpServers": {
+    "libreoffice": {
+      "command": "npx",
+      "args": ["-y", "@passerbyflutter/libreoffice-mcp-tools"]
+    }
+  }
+}
+```
+
+**Global install:**
+
 ```bash
-# Clone and install
-git clone https://github.com/your-org/libreoffice-mcp-tools
+npm install -g @passerbyflutter/libreoffice-mcp-tools
+```
+
+**From source:**
+
+```bash
+git clone https://github.com/passerbyflutter/libreoffice-mcp-tools
 cd libreoffice-mcp-tools
 npm install
 npm run build
@@ -61,8 +81,8 @@ Add to your MCP client configuration (e.g., Claude Desktop `claude_desktop_confi
 {
   "mcpServers": {
     "libreoffice": {
-      "command": "node",
-      "args": ["/path/to/libreoffice-mcp-tools/build/bin/libreoffice-mcp.js"],
+      "command": "npx",
+      "args": ["-y", "@passerbyflutter/libreoffice-mcp-tools"],
       "env": {
         "SOFFICE_PATH": "/path/to/soffice"
       }
@@ -77,8 +97,8 @@ Or use `.mcp.json` at your project root:
 {
   "mcpServers": {
     "libreoffice": {
-      "command": "node",
-      "args": ["./build/bin/libreoffice-mcp.js"]
+      "command": "npx",
+      "args": ["-y", "@passerbyflutter/libreoffice-mcp-tools"]
     }
   }
 }
