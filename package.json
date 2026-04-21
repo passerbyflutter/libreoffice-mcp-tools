@@ -1,0 +1,66 @@
+{
+  "name": "@passerbyflutter/libreoffice-mcp-tools",
+  "version": "0.1.0",
+  "description": "MCP server for reading, writing, and editing Office documents via LibreOffice",
+  "type": "module",
+  "author": "passerbyflutter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/passerbyflutter/libreoffice-mcp-tools.git"
+  },
+  "homepage": "https://github.com/passerbyflutter/libreoffice-mcp-tools#readme",
+  "bugs": {
+    "url": "https://github.com/passerbyflutter/libreoffice-mcp-tools/issues"
+  },
+  "bin": {
+    "libreoffice-mcp": "./build/bin/libreoffice-mcp.js"
+  },
+  "main": "./build/src/index.js",
+  "exports": {
+    ".": "./build/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node build/bin/libreoffice-mcp.js",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --experimental-strip-types tests/smoke.ts",
+    "lint": "eslint src/ bin/",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "files": [
+    "build/",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "docx": "^8.5.0",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.8.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^10.2.1",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "libreoffice",
+    "office",
+    "docx",
+    "xlsx",
+    "pptx",
+    "ai",
+    "llm",
+    "model-context-protocol"
+  ],
+  "license": "MIT"
+}

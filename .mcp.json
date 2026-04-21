@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "libreoffice": {
+      "command": "node",
+      "args": ["./build/bin/libreoffice-mcp.js"],
+      "env": {}
+    }
+  }
+}
