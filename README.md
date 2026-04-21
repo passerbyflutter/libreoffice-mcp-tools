@@ -3,9 +3,8 @@
 [![npm version](https://img.shields.io/npm/v/@passerbyflutter/libreoffice-mcp-tools.svg)](https://npmjs.org/package/@passerbyflutter/libreoffice-mcp-tools)
 
 > [!WARNING]
-> 本專案由 **GitHub Copilot** 自動生成，未經完整人工審閱。
-> 程式碼可能包含錯誤、安全疑慮或非預期行為，**請自行評估使用風險**，勿直接用於生產環境。
-> This project was **written by GitHub Copilot**. Use at your own risk.
+> This project was **written by GitHub Copilot** and has not been fully reviewed by a human.
+> Code may contain bugs, security issues, or unexpected behavior. **Use at your own risk.** Do not use in production without thorough review.
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives AI agents (Claude, Copilot, Gemini, Cursor, etc.) the ability to **read, write, and edit Office documents** via LibreOffice — with a token-efficient design that minimizes LLM context usage.
 
